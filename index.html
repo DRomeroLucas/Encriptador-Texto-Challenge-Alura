@@ -7,11 +7,26 @@
 </head>
 <body>
     <header>
-        <img src="assets/codigo-cuadrado.png" alt="Logo código cuadrado">
+        <img src="assets/A_alura.png" alt="Logo código cuadrado">
     </header>
-    <section class="contenedor">
-        <textarea name="contenedor__texto__entrada" id="texto__entrada"></textarea>
-        <div class="contenedor__texto___muestra__resultado"></div>
+    <section class="contenedor contenedor__texto">
+        <textarea name="contenedor__texto__entrada" id="texto__a__modificar" placeholder="Ingrese texto aquí"></textarea>
+        <p>
+            <img src="assets/exclamacion.png" alt="signo de exclamación">
+            Solo letras minúsculas y sin acentos
+        </p>
+        <button href="boton boton_encriptar" onclick="encriptar();">Encriptar</button>
+        <button href="boton boton_desencriptar" onclick="desencriptar();">Desencriptar</button>
     </section>
+    <section class="contenedor contenedor__presentacion">
+        <img src="assets/munneco.png" alt="Persona con lupa">
+        <h2 class="contenedor__presentacion__subtitulo">Ningún mensaje fue encontrado</h2>
+        <p class="contenedor__presentacion__sugerencia">Ingresa el texto que desees encriptar o desencriptar.</p>
+    </section>
+    <footer class="informacion">
+        <p>Desarrollado por: David Romero (DrDev)</p>
+        <p>2024</p>
+    </footer>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
