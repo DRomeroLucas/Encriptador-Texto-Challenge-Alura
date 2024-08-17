@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
 <body>
     <header>
         <img src="assets/A_alura.png" alt="Logo código cuadrado">
     </header>
-    <section class="contenedor contenedor__texto">
-        <textarea name="contenedor__texto__entrada" id="texto__a__modificar" placeholder="Ingrese texto aquí"></textarea>
-        <p>
-            <img src="assets/exclamacion.png" alt="signo de exclamación">
-            Solo letras minúsculas y sin acentos
-        </p>
-        <button href="boton boton_encriptar" onclick="encriptar();">Encriptar</button>
-        <button href="boton boton_desencriptar" onclick="desencriptar();">Desencriptar</button>
-    </section>
-    <section class="contenedor contenedor__presentacion">
-        <img src="assets/munneco.png" alt="Persona con lupa">
-        <h2 class="contenedor__presentacion__subtitulo">Ningún mensaje fue encontrado</h2>
-        <p class="contenedor__presentacion__sugerencia">Ingresa el texto que desees encriptar o desencriptar.</p>
-    </section>
-    <footer class="informacion">
+    <main class="contenedorPrincipal">
+        <section class="contenedor contenedor__texto">
+            <textarea class="contenedor__texto__entrada" id="texto__a__modificar" placeholder="Ingrese texto aquí"></textarea>
+            <p class="contenedor__texto__sugerencia">
+                <img src="assets/exclamacion.png" alt="signo de exclamación">
+                Solo letras minúsculas y sin acentos
+            </p>
+            <div class="contenedor__botones">
+                <button class="boton contenedor__botones__encriptar" href="boton_encriptar" onclick="encriptar();">Encriptar</button>
+                <button class="boton contenedor__botones__desencriptar" href="boton_desencriptar" onclick="desencriptar();">Desencriptar</button>
+            </div>
+        </section>
+        <section class="contenedor contenedor__presentacion">
+            <div class="contenedor__modificable">
+                <img class="munneco" src="assets/munneco.png" alt="Persona con lupa">
+                <h2 class="contenedor__presentacion__subtitulo">Ningún mensaje fue encontrado</h2>
+                <p class="contenedor__presentacion__sugerencia">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
         <p>Desarrollado por: David Romero (DrDev)</p>
         <p>2024</p>
     </footer>

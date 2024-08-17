@@ -1,0 +1,241 @@
+:root {
+    /* Paleta de colores */
+    --primario: #F7572D;
+    --secundario: #F79E2D;
+    --terciario: #F77A2D;
+    --cuaternario: #F7332D;
+    --seleccionPrimario: #E03500;
+    --seleccionSecundario: #DB8000;
+    --fondoPrimario: #F9ECE1;
+    --fondoSecundario: #F7F9F6;
+    --blanco: #ffffff;
+
+    /* Fuente de textos */
+    --fuenteTextos: "Inter", sans-serif;
+}
+
+/* Box-sizing */
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Estilos globales */
+body {
+    background-color: var(--fondoPrimario);
+    font-family: var(--fuenteTextos);
+}
+
+.contenedorPrincipal {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5rem;
+    gap: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .contenedorPrincipal {
+        flex-direction: column;
+    }
+}
+
+.boton {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+    border: none;
+    color: var(--blanco);
+}
+
+@media (max-width: 768px) {
+    .boton {
+        width: 332px;
+    }    
+}
+
+@media (max-width: 468px) {
+    .boton {
+        width: 343px;
+    }    
+}
+
+/* Header */
+header {
+    margin: 2% ;
+}
+
+@media (max-width: 768px) {
+    header {
+        margin: 4% 2% 2% 4%;
+    }
+}
+
+/* Primer contenedor */
+.contenedor__texto {
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    .contenedor__texto {
+        width: 100%;
+    }
+}
+
+/* Text Area */
+.contenedor__texto__entrada {
+    /* Forma */
+    background-color: var(--fondoPrimario);
+    resize: none;
+    overflow: hidden;
+    border: none;
+    width: 100%;
+    height: 25rem;
+
+    /* Texto */
+    font-family: var(--fuenteTextos);
+    color: var(--primario);
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.contenedor__texto__entrada:focus{
+    outline:none;
+}
+
+.contenedor__texto__entrada::placeholder {
+    font-family: var(--fuenteTextos);
+    color: var(--primario);
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.contenedor__texto__sugerencia {
+    color: var(--secundario);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* Botones encriptar y desencriptar */
+.contenedor__botones {
+    display: flex;
+    gap: 24px;
+}
+
+.contenedor__botones__encriptar {
+    background-color: var(--cuaternario);
+    transition: background-color 0.8s;
+}
+
+.contenedor__botones__encriptar:hover {
+    background-color: var(--seleccionSecundario);
+}
+
+.contenedor__botones__desencriptar, .boton__copiar {
+    background-color: var(--terciario);
+    transition: background-color 0.8s;
+}
+
+.contenedor__botones__desencriptar:hover, .boton__copiar:hover {
+    background-color: var(--seleccionPrimario);
+}
+
+
+/* Segundo contenedor */
+.contenedor__presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    align-items: flex-start;
+    background-color: var(--fondoSecundario);
+    border-radius: 32px;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+@media (max-width: 768px) {
+    .contenedor__presentacion {
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .munneco {
+        display: none;
+    }
+}
+
+.contenedor__presentacion__subtitulo {
+    color: var(--primario);
+}
+
+.contenedor__presentacion__sugerencia {
+    font-size: 24px;
+    color: var(--secundario);
+}
+
+/* Resultado encriptado o desencriptado */
+
+.contenedor__presentacion__resultado {
+    color: var(--secundario);
+    font-size: 24px;
+    text-align: justify;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .contenedor__presentacion__resultado{
+        padding: 32px;
+    }
+}
+
+@media (max-width: 468px) {
+    .contenedor__presentacion__resultado{
+        width: 50%;
+    }
+}
+
+/* Boton copiar (Color se agrega junto con boton de desencriptar) */
+.boton__copiar {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 0;
+    max-width: 70%;
+}
+@media (max-width: 768px) {
+    .boton__copiar {
+        position: relative;
+        left: auto;
+        transform: none;
+        width: 80%;
+    }
+}
+
+.ocultar_boton_copiar {
+    display: none;
+}
+
+/* footer */
+footer {
+    margin: 5% 0 2% 2%;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin: 4%;;
+    }
+}
+
+footer p {
+    margin: 0;
+}
