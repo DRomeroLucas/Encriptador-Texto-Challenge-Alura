@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Version-1.0-blue)
+![Static Badge](https://img.shields.io/badge/Version-1.1-blue)
 
 <h1 align="center">Encriptador de texto</h1>
 <h3>Resumen</h3>
@@ -20,3 +20,8 @@
   <li>La letra "u" es convertida para "ufat"</li>
 </ul>
 <p>De la misma manera que encripta el texto también lo puede desencriptar.</p>
+<h3>Qué hay de nuevo en la versión V.1.1?</h3>
+<ul>
+  <li>Se agrega el modo oscuro de manera general en la web y a partes específicos como al icono de cambio de tema y al header.</li>
+  <li>A su vez, las letras tienen efecto de neon por medio de la propiedad text-shadow</li>
+</ul>
